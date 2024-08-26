@@ -17,7 +17,7 @@ const Login = () => {
     setMessage("");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        "https://otp-api.labontest.tech:5000/api/auth/login",
         { email, password }
       );
       setMessage(response.data.msg);
@@ -35,7 +35,7 @@ const Login = () => {
     setMessage("");
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/verify-login-otp",
+        "https://otp-api.labontest.tech:5000/api/auth/verify-login-otp",
         { email, otp }
       );
       setMessage(response.data.msg);
@@ -50,7 +50,7 @@ const Login = () => {
   };
 
   const handleGoogleLogin = () => {
-    window.location.href = "http://localhost:5000/api/auth/google";
+    window.location.href = "https://otp-api.labontest.tech:5000/api/auth/google";
   };
 
   return (
